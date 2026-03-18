@@ -44,7 +44,7 @@ const ServiceSection = () => {
   ];
 
   return (
-    <div className="pb-50 flex items-center flex-col">
+    <div className=" flex items-center flex-col">
         <div className="mt-5">
             <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
             Services
@@ -56,7 +56,7 @@ const ServiceSection = () => {
             </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-x-25 gap-y-4">
+        <div className="grid grid-cols-3 gap-x-36 gap-y-4">
             {serviceSectionData.map((item, index) => (
             <CustomServiceCard key={index} cardData={item} />
             ))}

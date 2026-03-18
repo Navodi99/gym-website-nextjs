@@ -4,6 +4,7 @@ import Navigation from "./(components)/sections/navigation/Navigation";
 import HeroSection from "./(components)/sections/hero/HeroSection";
 import AboutUsSection from "./(components)/sections/about/AboutUsSection";
 import ServiceSection from "./(components)/sections/servicePart/ServiceSection";
+import PricingSection from "./(components)/sections/pricing/PricingSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
   <HeroSection/>
   <AboutUsSection/>
   <ServiceSection/>
+  <PricingSection/>
   </div>
   );
 }
