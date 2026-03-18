@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #d5a310;
+  --secondary-color: #292113;
+  --gray-color: #2c2c2c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,12 +15,9 @@
   }
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-min-height: 100vh;
+  font-family: var(--font-poppins), sans-serif;
+  min-height: 100vh;
 }
-
-

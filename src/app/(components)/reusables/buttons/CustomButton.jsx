@@ -1,28 +1,38 @@
+"use client";
+import clsx from "clsx";
 import { MoveUpRight } from "lucide-react";
-import React from "react";
 
-
-const CustomButton = ({ children }) => {
+const CustomButton = ({ children, invert }) => {
   return (
-    <div className="flex items-center">
-      <div className="border-2 border-(--primary-color) rounded-l-full rounded-r-full p-10 flex">
-        <span className="text-white">{children}</span>
+    <div className="flex items-center group cursor-pointer">
+      
+     
+      <div
+        className={clsx(
+          "border-2 rounded-full flex px-6 py-3 transition-all duration-300",
+          invert
+            ? "bg-(--primary-color) border-(--primary-color) group-hover:bg-transparent"
+            : "border-(--primary-color) group-hover:bg-(--primary-color)"
+        )}
+      >
+        <span className="text-white uppercase tracking-widest">
+          {children}
+        </span>
       </div>
-      <div className=" border-2 border-(--primary-color) rounded-full w-12 h-12 ">
-        <MoveUpRight className="text-white w-4 h-4" />
+
+      <div
+        className={clsx(
+          "border-2 rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300",
+          invert
+            ? "bg-(--primary-color) border-(--primary-color) group-hover:bg-transparent"
+            : "border-(--primary-color) group-hover:bg-(--primary-color)"
+        )}
+      >
+        <MoveUpRight className="text-white w-6 h-6" strokeWidth={0.8} />
       </div>
+      
     </div>
   );
 };
 
 export default CustomButton;
-{
-  /* <div className="flex h-fit w-fit items-center">
-      <div className=" w-fit h-fit p-2 bg-(--primary-color) rounded-l-full rounded-r-full">
-        <span className="text-(--light-color)">{children}</span>
-      </div>
-      <div className="flex items-center justify-center text-(--light-color) w-fit h-fit bg-(--primary-color) rounded-full p-2" >
-        <GoArrowUpRight className="w-15 h-15" />
-      </div>
-    </div> */
-}

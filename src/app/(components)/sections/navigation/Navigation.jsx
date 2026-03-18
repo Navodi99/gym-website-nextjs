@@ -1,19 +1,26 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import CustomButton from "../../reusables/buttons/CustomButton";
+import clsx from "clsx";
 
 function Navigation() {
+  const [activeMenuItem,setActiveMenuItem] = useState(1);
+
+  const onclickMenuItem = ({id})=>{
+setActiveMenuItem(id);
+  }
   return (
     <div className="flex justify-between items-center w-full h-20"> 
-      <div className="rounded-full w-30 overflow-hidden z-1">
-        <img  src="/images/GymLogo.jpg"  alt="Logo" className="w-40 -z-1 rounded-full" />
+      <div className="rounded-full w-20 overflow-hidden ">
+        <img  src="/images/GymLogo.jpg"  alt="Logo" className="w-40 " />
       </div>
       <div>
-        <ul className="flex gap-2 text-(--light-color) uppercase">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Trainers</a></li>
+        <ul className="flex gap-14 text-(--light-color) uppercase">
+            <li className={clsx(activeMenuItem === 1 ?" border-b-2 border-b-(--primary-color)":"")} onClick={()=>onclickMenuItem(1)}><a href="">Home</a></li>
+            <li className={clsx(activeMenuItem === 2 ?" border-b-2 border-b-(--primary-color)":"")} onClick={()=>onclickMenuItem(2)}><a href="">About</a></li>
+            <li className={clsx(activeMenuItem === 3 ?" border-b-2 border-b-(--primary-color)":"")} onClick={()=>onclickMenuItem(3)}><a href="">Services</a></li>
+            <li className={clsx(activeMenuItem === 4 ?" border-b-2 border-b-(--primary-color)":"")} onClick={()=>onclickMenuItem(4)}><a href="">Pricing</a></li>
+            <li className={clsx(activeMenuItem === 5 ?" border-b-2 border-b-(--primary-color)":"")} onClick={()=>onclickMenuItem(5)}><a href="">Trainers</a></li>
         </ul>
       </div>
       <div>

@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./(components)/sections/navigation/Navigation";
+import HeroSection from "./(components)/sections/hero/HeroSection";
+import AboutUsSection from "./(components)/sections/about/AboutUsSection";
 
 export default function Home() {
   return (
-  <div className="w-full h-screen flex flex-col gap-5 m-0 px-20 py-10">
+  <div className="w-full h-screen flex flex-col gap-5 m-0 px-15 py-5">
   <Navigation/>
+  <HeroSection/>
+  <AboutUsSection/>
   </div>
   );
 }
