@@ -26,7 +26,7 @@ const CustomButton = ({ children, invert, className ,onclick}) => {
             : "border-(--primary-color) group-hover:bg-(--primary-color)"
         )}
       >
-        <MoveUpRight className="text-white w-6 h-6" strokeWidth={0.8} />
+        <MoveUpRight className="text-white w-6 h-6 group-hover:rotate-45" strokeWidth={0.8} />
       </div>
       
     </div>

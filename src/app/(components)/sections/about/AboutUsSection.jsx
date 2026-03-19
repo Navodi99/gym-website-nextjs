@@ -31,15 +31,15 @@ const AboutUsSection = () => {
   ];
 
   return (
-    <div className="bg-(--gray-color) border-t-4 border-(--primary-color) rounded-2xl" id="about">
+    <div className="bg-(--gray-color) border-t-4 border-(--primary-color) rounded-3xl mb-15 p-5" id="about">
       <div>
-        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
+        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center ">
           About Us
         </p>
         <p className="text-4xl text-center mt-5">
           Built for Everyone. Powered by Passion.
         </p>
-        <p className="text-sm text-center px-100 mt-7">
+        <p className="text-sm text-center px-90 mt-7">
           We provide the best environment, the best equipment, and the best
           coaching to help
           <br /> people achieve their absolute peak potential.

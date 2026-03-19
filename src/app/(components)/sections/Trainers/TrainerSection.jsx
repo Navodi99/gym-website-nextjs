@@ -37,15 +37,15 @@ const TrainerSection = () => {
   ];
 
   return (
-    <div className="" id="trainers">
+    <div className="flex flex-col items-center mb-15 p-5" id="trainers">
       <div>
-        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
+        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center">
           Team
         </p>
         <p className="text-4xl text-center mt-5">Meet Your Trainers</p>
       </div>
 
-      <div className="flex items-center justify-between gap-12.5 mt-10">
+      <div className="flex items-center justify-between gap-10 my-5">
         {trainersData.map((item, index) => (
           <CustomerTrainerCard key={index} cardData={item} />
         ))}

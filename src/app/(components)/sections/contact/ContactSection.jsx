@@ -4,15 +4,15 @@ import CustomButton from "../../reusables/buttons/CustomButton";
 
 const ContactSection = () => {
   return (
-    <div className="flex justify-between gap-7 " id="contact">
-      <div className="flex flex-col">
+    <div className="flex justify-between border-t-4 border-(--primary-color) gap-10 rounded-l-3xl rounded-r-3xl mb-15 p-5" id="contact">
+      <div className="flex flex-col  px-10">
         <div className="flex flex-col">
           <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) ">
             Contact
           </p>
           <p className="font-medium text-4xl mt-5">Get In Touch</p>
           <p className="text-sm mt-5">
-            Ready to start? Have questions about our plans or facility? Drop us
+            Ready to start? Have questions about our plans or facility? <br/>Drop us
             a message or visit us in person.
           </p>
         </div>
@@ -49,7 +49,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="border border-(--foreground) w-180 h-fit rounded-l-3xl rounded-r-3xl p-10 ">
+      <div className="border border-(--foreground) w-180 h-fit rounded-l-3xl rounded-r-3xl p-10 m-10">
         <div className="flex flex-col items-start gap-3 ">
           <label htmlFor="name" className="">
             Name

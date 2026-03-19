@@ -46,9 +46,9 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="pb-50 border-2 border-(--primary-color) rounded-2xl mt-5" id="pricing">
-      <div className="mt-5">
-        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
+    <div className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5" id="pricing">
+      <div className="flex flex-col items-center">
+        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center">
           Pricing
         </p>
         <p className="text-4xl text-center mt-5">Choose Your Plan</p>
@@ -57,7 +57,7 @@ const PricingSection = () => {
           for real
         </p>
       </div>
-      <div className="flex items-center justify-center gap-20 mt-5">
+      <div className="flex items-center justify-center gap-40 my-5">
         {pricingData.map((item, index) => (
           <CustomPricingCard key={index} cardItem={item} />
         ))}
