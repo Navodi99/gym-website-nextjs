@@ -6,6 +6,12 @@ import clsx from "clsx";
 import { container, fadeUp, imageAnim } from "@/app/(utils)/animation";
 
 const HeroSection = () => {
+  const onclickBtns = (s) => {
+    const section = document.getElementById(s);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <motion.div
       variants={container}
@@ -13,7 +19,7 @@ const HeroSection = () => {
       animate="show"
       id="home"
       className={clsx(
-        "flex items-center justify-between p-5 my-15",
+        "flex items-center justify-between p-5 mb-15",
         "max-sm:flex-col max-sm:my-2",
       )}
     >
@@ -51,8 +57,8 @@ const HeroSection = () => {
           variants={fadeUp}
           className="flex gap-3 mt-6 max-sm:flex-col max-sm:items-center"
         >
-          <CustomButton>Join Now</CustomButton>
-          <CustomButton invert>View Plans</CustomButton>
+          <CustomButton onclick={()=>(onclickBtns("contact"))}>Join Now</CustomButton>
+          <CustomButton onclick={()=>(onclickBtns("pricing"))} invert>View Plans</CustomButton>
         </motion.div>
       </motion.div>
 
