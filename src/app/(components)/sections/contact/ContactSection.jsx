@@ -1,10 +1,40 @@
+"use client";
 import { MailCheck, MapPin, Phone } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from "../../reusables/buttons/CustomButton";
+import emailjs from "emailjs-com";
 
 const ContactSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .send("service_8kbnqxk", "template_fobs4jp", {
+      name,
+      email,
+      message,
+    }, "Rt-hhWF6kpzZzWnHw")
+    .then(() => {
+      alert("Message sent!");
+      setName("");
+      setEmail("");
+      setMessage("");
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message");
+    });
+};
+
   return (
-    <div className=" max-sm:items-center max-sm:my-2 max-sm:flex-col flex justify-between border-t-4 border-(--primary-color) gap-10 rounded-l-3xl rounded-r-3xl mb-15 p-5" id="contact">
+    <div
+      className=" max-sm:items-center max-sm:my-2 max-sm:flex-col flex justify-between border-t-4 border-(--primary-color) gap-10 rounded-l-3xl rounded-r-3xl mb-15 p-5"
+      id="contact"
+    >
       <div className="flex flex-col  px-10 max-sm:px-1">
         <div className="flex flex-col">
           <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) ">
@@ -12,8 +42,8 @@ const ContactSection = () => {
           </p>
           <p className="font-medium text-4xl mt-5">Get In Touch</p>
           <p className="text-sm mt-5">
-            Ready to start? Have questions about our plans or facility? <br/>Drop us
-            a message or visit us in person.
+            Ready to start? Have questions about our plans or facility? <br />
+            Drop us a message or visit us in person.
           </p>
         </div>
         <div className="flex flex-col items-start gap-10 mt-5">
@@ -57,6 +87,8 @@ const ContactSection = () => {
           <input
             type="text"
             name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             id=""
             placeholder="Enter Your Name"
             className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
@@ -69,6 +101,8 @@ const ContactSection = () => {
           <input
             type="email"
             name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             id=""
             placeholder="Enter Your Email"
             className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
@@ -80,13 +114,17 @@ const ContactSection = () => {
           </label>
           <textarea
             name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             id=""
             className="bg-(--gray-color) w-160 h-fit py-8 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
             placeholder="How can we help ?"
           ></textarea>
         </div>
         <div className="mt-6">
-          <CustomButton className="w-160 max-sm:w-72">Send Message</CustomButton>
+          <CustomButton className="w-160 max-sm:w-72" onclick={handleSubmit}>
+            Send Message
+          </CustomButton>
         </div>
       </div>
     </div>
