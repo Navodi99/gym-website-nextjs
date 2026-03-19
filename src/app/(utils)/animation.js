@@ -8,7 +8,6 @@ export const container = {
   },
 };
 
-
 export const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: {

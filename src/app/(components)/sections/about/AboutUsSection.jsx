@@ -37,7 +37,7 @@ const AboutUsSection = () => {
     <motion.div
       variants={container}
       initial="hidden"
-      animate="show"
+      whileInView="show"
       className="  max-sm:flex-col bg-(--gray-color) border-t-4 border-(--primary-color) rounded-3xl mb-15 p-5 max-sm:my-2"
       id="about"
     >
