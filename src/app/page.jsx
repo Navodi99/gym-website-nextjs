@@ -11,7 +11,7 @@ import Footer from "./(components)/sections/footer/Footer";
 
 export default function Home() {
   return (
-  <div className="w-full h-screen flex flex-col m-0 px-15 py-4 max-sm:px-4 ">
+  <div className="w-full h-screen flex flex-col m-0 px-15 py-4 max-sm:px-4 max-lg:px-5 ">
   <Navigation/>
   <HeroSection/>
   <AboutUsSection/>

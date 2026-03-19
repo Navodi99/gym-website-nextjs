@@ -18,7 +18,7 @@ const HeroSection = () => {
         id="home">
         <div className="pb-10 flex  flex-col">
             <p className="uppercase tracking-widest font-semibold max-sm:text-center ">Built Strong</p>
-            <p className="text-6xl mt-6 max-sm:text-4xl max-sm:text-center">Transform<span className="text-(--primary-color)"> Your Body.</span> </p>
+            <p className="text-6xl mt-6 max-sm:text-4xl max-sm:text-center ">Transform<span className="text-(--primary-color)"> Your Body.</span> </p>
             <p className="text-6xl mt-6 max-sm:text-4xl max-sm:text-center">Transform<span className="text-(--primary-color)"> Your Life.</span></p>
             <p className="font-light mt-6">
             Join the ultimate fitness experience with expert trainers, modern<br/>

@@ -40,7 +40,7 @@ function Navigation() {
       <div className="rounded-full w-20 overflow-hidden ">
         <img src="/images/GymLogo.jpg" alt="Logo" className="w-40 " />
       </div>
-      <div>
+      <div className="hidden">
         <ul className="flex gap-14 text-(--light-color) uppercase">
           {navData.map((item) => (
             <li
@@ -59,7 +59,7 @@ function Navigation() {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="hidden">
         <CustomButton onclick={onclickContactBtn}>Contact Us</CustomButton>
       </div>
     </div>
