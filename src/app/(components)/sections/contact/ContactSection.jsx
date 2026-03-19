@@ -10,9 +10,33 @@ const ContactSection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let newErrors = {};
+
+    if (!name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validate()) return;
 
     emailjs
       .send(
@@ -123,6 +147,7 @@ const ContactSection = () => {
             placeholder="Enter Your Name"
             className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72 text-(--white)"
           />
+          {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
         </div>
         <div className="flex flex-col items-start gap-3 mt-3">
           <label htmlFor="email" className="">
@@ -137,6 +162,9 @@ const ContactSection = () => {
             placeholder="Enter Your Email"
             className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72 text-(--white)"
           />
+          {errors.email && (
+            <p className="text-red-500 text-sm">{errors.email}</p>
+          )}
         </div>
         <div className="flex flex-col items-start gap-3 mt-3">
           <label htmlFor="message" className="">
@@ -150,6 +178,9 @@ const ContactSection = () => {
             className="bg-(--gray-color) w-160 h-fit py-8 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72 text-(--white)"
             placeholder="How can we help ?"
           ></textarea>
+          {errors.message && (
+            <p className="text-red-500 text-sm">{errors.message}</p>
+          )}
         </div>
         <div className="mt-6">
           <CustomButton className="w-160 max-sm:w-72" onclick={handleSubmit}>
