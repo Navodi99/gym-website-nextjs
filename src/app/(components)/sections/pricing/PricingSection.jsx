@@ -1,7 +1,10 @@
+"use client";
 import { Check } from "lucide-react";
 import React from "react";
 import CustomButton from "../../reusables/buttons/CustomButton";
 import CustomPricingCard from "../../reusables/cards/CustomPricingCard";
+import { motion } from "framer-motion";
+import { container, fadeIn, fadeUp } from "@/app/(utils)/animation";
 
 const PricingSection = () => {
   const pricingData = [
@@ -46,23 +49,50 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5 max-sm:my-2" id="pricing">
-      <div className="flex flex-col items-center">
-        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5 max-sm:my-2"
+      id="pricing"
+    >
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="flex flex-col items-center"
+      >
+        <motion.p
+          variants={fadeUp}
+          className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl"
+        >
           Pricing
-        </p>
-        <p className="text-4xl text-center mt-5 max-sm:text-2xl">Choose Your Plan</p>
-        <p className="text-sm text-center px-98 mt-7  max-sm:px-2">
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          className="text-4xl text-center mt-5 max-sm:text-2xl"
+        >
+          Choose Your Plan
+        </motion.p>
+        <motion.p
+          variants={fadeIn}
+          className="text-sm text-center px-98 mt-7  max-sm:px-2"
+        >
           No hidden fees. No complicated contracts. Just straightforward pricing
           for real
-        </p>
-      </div>
-      <div className="flex items-center justify-center gap-40 my-5 max-sm:flex-col max-sm:gap-0 ">
+        </motion.p>
+      </motion.div>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="flex items-center justify-center gap-40 my-5 max-sm:flex-col max-sm:gap-0 "
+      >
         {pricingData.map((item, index) => (
           <CustomPricingCard key={index} cardItem={item} />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -61,3 +61,38 @@ export const buttonHover = {
   whileHover: { scale: 1.05 },
   whileTap: { scale: 0.95 },
 };
+
+export const blurFade = {
+  hidden: {
+    opacity: 0,
+    filter: "blur(10px)",
+    y: 20,
+  },
+
+  show: {
+    opacity: 1,
+    filter: "blur(0px)",
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+ 
+
+export const bounceIn = {
+  hidden: {
+    opacity: 0,
+    y: 80,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 10,
+    },
+  },
+};
