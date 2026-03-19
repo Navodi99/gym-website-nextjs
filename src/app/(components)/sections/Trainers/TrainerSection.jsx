@@ -45,7 +45,7 @@ const TrainerSection = () => {
         <p className="text-4xl text-center mt-5">Meet Your Trainers</p>
       </div>
 
-      <div className="flex items-center  gap-12.5 mt-10">
+      <div className="flex items-center justify-between gap-12.5 mt-10">
         {trainersData.map((item, index) => (
           <CustomerTrainerCard key={index} cardData={item} />
         ))}
