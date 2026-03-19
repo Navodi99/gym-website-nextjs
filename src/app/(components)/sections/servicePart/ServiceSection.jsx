@@ -44,19 +44,19 @@ const ServiceSection = () => {
   ];
 
   return (
-    <div className=" flex items-center flex-col mb-15 p-5 max-sm:hidden" id="services">
+    <div className=" flex items-center flex-col mb-15 p-5 max-sm:my-2" id="services">
         <div className="flex flex-col items-center">
-            <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center">
+            <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl">
             Services
             </p>
-            <p className="text-4xl text-center mt-5">What We Offer</p>
-            <p className="text-sm text-center px-98 mt-7">
+            <p className="text-4xl text-center mt-5 max-sm:text-2xl">What We Offer</p>
+            <p className="text-sm text-center px-98 mt-7 max-sm:px-2">
             Everything you need to build strength, increase endurance, and recover
             properly under one roof.
             </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-x-36 gap-y-4 my-5">
+        <div className="grid grid-cols-3 gap-x-36 gap-y-4 my-5 max-sm:grid-cols-1">
             {serviceSectionData.map((item, index) => (
             <CustomServiceCard key={index} cardData={item} />
             ))}
