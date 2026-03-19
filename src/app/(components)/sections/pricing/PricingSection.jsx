@@ -46,7 +46,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5" id="pricing">
+    <div className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5 max-sm:hidden" id="pricing">
       <div className="flex flex-col items-center">
         <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center">
           Pricing

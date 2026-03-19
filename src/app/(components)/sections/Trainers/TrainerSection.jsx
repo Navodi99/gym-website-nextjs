@@ -37,7 +37,7 @@ const TrainerSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mb-15 p-5" id="trainers">
+    <div className="flex flex-col items-center mb-15 p-5 max-sm:hidden" id="trainers">
       <div>
         <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center">
           Team

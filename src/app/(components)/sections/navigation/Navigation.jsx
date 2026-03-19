@@ -36,7 +36,7 @@ function Navigation() {
     }
   };
   return (
-    <div className="flex justify-between items-center w-full h-20">
+    <div className="flex justify-between items-center w-full h-20 max-sm:hidden">
       <div className="rounded-full w-20 overflow-hidden ">
         <img src="/images/GymLogo.jpg" alt="Logo" className="w-40 " />
       </div>

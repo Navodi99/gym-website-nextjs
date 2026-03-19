@@ -4,7 +4,7 @@ import CustomButton from "../../reusables/buttons/CustomButton";
 
 const ContactSection = () => {
   return (
-    <div className="max-sm:flex-col flex justify-between border-t-4 border-(--primary-color) gap-10 rounded-l-3xl rounded-r-3xl mb-15 p-5" id="contact">
+    <div className="max-sm:hidden max-sm:flex-col flex justify-between border-t-4 border-(--primary-color) gap-10 rounded-l-3xl rounded-r-3xl mb-15 p-5" id="contact">
       <div className="flex flex-col  px-10">
         <div className="flex flex-col">
           <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) ">
