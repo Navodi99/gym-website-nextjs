@@ -46,18 +46,18 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5 max-sm:hidden" id="pricing">
+    <div className=" border-2 border-(--primary-color) rounded-2xl mb-15 p-5 max-sm:my-2" id="pricing">
       <div className="flex flex-col items-center">
-        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center">
+        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl">
           Pricing
         </p>
-        <p className="text-4xl text-center mt-5">Choose Your Plan</p>
-        <p className="text-sm text-center px-98 mt-7">
+        <p className="text-4xl text-center mt-5 max-sm:text-2xl">Choose Your Plan</p>
+        <p className="text-sm text-center px-98 mt-7  max-sm:px-2">
           No hidden fees. No complicated contracts. Just straightforward pricing
           for real
         </p>
       </div>
-      <div className="flex items-center justify-center gap-40 my-5">
+      <div className="flex items-center justify-center gap-40 my-5 max-sm:flex-col max-sm:gap-0 ">
         {pricingData.map((item, index) => (
           <CustomPricingCard key={index} cardItem={item} />
         ))}
