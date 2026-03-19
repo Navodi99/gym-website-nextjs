@@ -2,10 +2,14 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
-import { blurFade, fadeUp } from "@/app/(utils)/animation";
+import { blurFade, container, fadeUp } from "@/app/(utils)/animation";
 
 const CustomerTrainerCard = ({cardData}) => {
   return (
+    <motion.div
+    initial="hidden"
+    whileInView="show"
+    variants={container}>
     <motion.div
     variants={blurFade}
     
@@ -30,6 +34,7 @@ const CustomerTrainerCard = ({cardData}) => {
         </div>
       </div>
     </motion.div>
+       </motion.div>
   );
 };
 

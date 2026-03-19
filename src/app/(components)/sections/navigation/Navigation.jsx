@@ -4,8 +4,11 @@ import CustomButton from "../../reusables/buttons/CustomButton";
 import clsx from "clsx";
 import { navigate } from "next/dist/client/components/segment-cache/navigation";
 import { Menu, X } from "lucide-react";
+import { useTheme } from "@/app/(context)/ThemeContext";
 
 function Navigation() {
+  const { theme, toggleTheme } = useTheme();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const navData = [
@@ -43,6 +46,12 @@ function Navigation() {
       <div className="rounded-full w-20 overflow-hidden ">
         <img src="/images/GymLogo.jpg" alt="Logo" className="w-40 " />
       </div>
+      <button
+        onClick={toggleTheme}
+        className="px-4 py-2 rounded-full bg-(--foreground) dark:bg-(--background) text-(--background) dark:text-(--foreground) transition border-2"
+      >
+        {theme === "light" ? " Dark" : "Light"}
+      </button>
       <div className="max-lg:hidden">
         <ul className="flex gap-14 text-(--light-color) uppercase">
           {navData.map((item) => (
@@ -66,14 +75,12 @@ function Navigation() {
         <CustomButton onclick={onclickContactBtn}>Contact Us</CustomButton>
       </div>
 
-      {/* Hamburger Icon */}
       <div className="lg:hidden">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       <div
         className={`absolute top-0 left-0 max-h-96 bg-(--primary-color)/95 z-10 text-(--foreground) transition-all duration-300 overflow-hidden ${
           isOpen ? " py-4 w-[60%]" : "w-0"
