@@ -1,3 +1,4 @@
+"use client";
 import {
   BicepsFlexed,
   Gem,
@@ -8,6 +9,8 @@ import {
 } from "lucide-react";
 import React from "react";
 import CustomServiceCard from "../../reusables/cards/CustomServiceCard";
+import { motion } from "framer-motion";
+import { container, fadeIn, fadeUp, slideLeft } from "@/app/(utils)/animation";
 
 const ServiceSection = () => {
   const serviceSectionData = [
@@ -44,24 +47,46 @@ const ServiceSection = () => {
   ];
 
   return (
-    <div className="flex items-center flex-col mb-15 p-5 max-sm:my-2" id="services">
-        <div className="flex flex-col items-center">
-            <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl">
-            Services
-            </p>
-            <p className="text-4xl text-center mt-5 max-sm:text-2xl">What We Offer</p>
-            <p className="text-sm text-center px-98 mt-7 max-sm:px-2">
-            Everything you need to build strength, increase endurance, and recover
-            properly under one roof.
-            </p>
-        </div>
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      className="flex items-center flex-col mb-15 p-5 max-sm:my-2"
+      id="services"
+    >
+      <motion.div variants={container} className="flex flex-col items-center">
+        <motion.p
+          variants={fadeUp}
+          className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl"
+        >
+          Services
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          className="text-4xl text-center mt-5 max-sm:text-2xl"
+        >
+          What We Offer
+        </motion.p>
+        <motion.p
+          variants={fadeIn}
+          className="text-sm text-center px-98 mt-7 max-sm:px-2"
+        >
+          Everything you need to build strength, increase endurance, and recover
+          properly under one roof.
+        </motion.p>
+      </motion.div>
 
-        <div className="grid grid-cols-3 gap-x-36 gap-y-4 my-5 max-sm:grid-cols-1">
-            {serviceSectionData.map((item, index) => (
-            <CustomServiceCard key={index} cardData={item} />
-            ))}
-        </div>
-    </div>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="grid grid-cols-3 gap-x-36 gap-y-4 my-5 max-sm:grid-cols-1"
+      >
+        {serviceSectionData.map((item, index) => (
+          <CustomServiceCard key={index} cardData={item} />
+        ))}
+      </motion.div>
+    </motion.div>
   );
 };
 
