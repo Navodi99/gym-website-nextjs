@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import CustomButton from "../../reusables/buttons/CustomButton";
 import clsx from "clsx";
 import { navigate } from "next/dist/client/components/segment-cache/navigation";
+import { Menu, X } from "lucide-react";
 
 function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navData = [
     { id: 1, name: "Home", link: "#home" },
     { id: 2, name: "About", link: "#about" },
@@ -36,11 +39,11 @@ function Navigation() {
     }
   };
   return (
-    <div className="flex justify-between items-center w-full h-20 max-sm:hidden">
+    <div className="flex justify-between items-center w-full h-20 ">
       <div className="rounded-full w-20 overflow-hidden ">
         <img src="/images/GymLogo.jpg" alt="Logo" className="w-40 " />
       </div>
-      <div className="hidden">
+      <div className="max-lg:hidden">
         <ul className="flex gap-14 text-(--light-color) uppercase">
           {navData.map((item) => (
             <li
@@ -59,11 +62,36 @@ function Navigation() {
           ))}
         </ul>
       </div>
-      <div className="hidden">
+      <div className="max-lg:hidden">
         <CustomButton onclick={onclickContactBtn}>Contact Us</CustomButton>
       </div>
-      <div>
-        
+
+      {/* Hamburger Icon */}
+      <div className="lg:hidden">
+        <button onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      <div
+        className={`absolute top-0 left-0 max-h-96 bg-(--primary-color)/95 z-10 text-(--foreground) transition-all duration-300 overflow-hidden ${
+          isOpen ? " py-4 w-[60%]" : "w-0"
+        }`}
+      >
+        <ul className="flex flex-col items-start gap-10 pl-10">
+          {navData.map((item) => (
+            <li key={item.id}>
+              <a
+                href={item.link}
+                onClick={() => setIsOpen(false)}
+                className="text-lg hover:text-yellow-400 font-bold "
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

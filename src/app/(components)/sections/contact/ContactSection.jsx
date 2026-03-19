@@ -49,7 +49,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-      <div className="border border-(--foreground) w-180 h-fit rounded-l-3xl rounded-r-3xl p-10 m-10 max-sm:w-72 max-sm:m-0 max-sm:p-4">
+      <div className="border border-(--foreground) w-180 h-fit rounded-l-3xl rounded-r-3xl p-10 m-10 max-sm:w-80 max-sm:m-0 max-sm:p-4">
         <div className="flex flex-col items-start gap-3 ">
           <label htmlFor="name" className="">
             Name
@@ -59,7 +59,7 @@ const ContactSection = () => {
             name="name"
             id=""
             placeholder="Enter Your Name"
-            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-64"
+            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
           />
         </div>
         <div className="flex flex-col items-start gap-3 mt-3">
@@ -71,7 +71,7 @@ const ContactSection = () => {
             name="email"
             id=""
             placeholder="Enter Your Email"
-            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-64"
+            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
           />
         </div>
         <div className="flex flex-col items-start gap-3 mt-3">
@@ -81,12 +81,12 @@ const ContactSection = () => {
           <textarea
             name="message"
             id=""
-            className="bg-(--gray-color) w-160 h-fit py-8 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-64"
+            className="bg-(--gray-color) w-160 h-fit py-8 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
             placeholder="How can we help ?"
           ></textarea>
         </div>
         <div className="mt-6">
-          <CustomButton className="w-160 max-sm:w-64">Send Message</CustomButton>
+          <CustomButton className="w-160 max-sm:w-72">Send Message</CustomButton>
         </div>
       </div>
     </div>
