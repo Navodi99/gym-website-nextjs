@@ -14,10 +14,10 @@ const CustomPricingCard = ({cardItem}) => {
     className="relative w-78 h-[calc(fit-content+40px)] py-8  overflow-y-hidden overflow-x-hidden max-sm:w-70">  
       <div
       className="bg-(--secondary-color)  w-78 h-fit px-5 py-8 border-2 border-(--foreground) -skew-y-[4deg] max-sm:w-70">
-        <p className="text-2xl font-semibold skew-y-[4deg] max-sm:text-xl ">{cardItem.header}</p>
+        <p className="text-2xl font-semibold skew-y-[4deg] max-sm:text-xl text-(--white)">{cardItem.header}</p>
         <p className="text-2xl font-semibold text-(--primary-color) skew-y-[4deg] max-sm:text-xl">{cardItem.text}</p>
-        <p className="text-sm my-4 skew-y-[4deg] ">{cardItem.description}</p>
-        <p className="text-3xl font-bold skew-y-[4deg] max-sm:text-2xl">
+        <p className="text-sm my-4 skew-y-[4deg] text-(--white)">{cardItem.description}</p>
+        <p className="text-3xl font-bold skew-y-[4deg] max-sm:text-2xl text-(--white)">
           <span className="text-(--primary-color) skew-y-[4deg] ">{cardItem.price}</span> / mo
         </p>
 
@@ -27,12 +27,12 @@ const CustomPricingCard = ({cardItem}) => {
             <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[radial-gradient(circle,var(--primary-color)_60%,var(--secondary-color)_100%)]">
               <Check className="w-4 h-4 text-(--background)" />
             </div>
-            <p className="text-sm max-sm:text-xs">{item}</p>
+            <p className="text-sm max-sm:text-xs text-(--white)">{item}</p>
           </div>
           ))}
         </div>
         <div className="mt-5 flex items-center justify-center skew-y-[4deg]">
-          <CustomButton>Enroll Now</CustomButton>
+          <CustomButton className="text-(--white)">Enroll Now</CustomButton>
         </div>
       </div>
     </motion.div>

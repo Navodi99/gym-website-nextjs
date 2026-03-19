@@ -121,7 +121,7 @@ const ContactSection = () => {
             onChange={(e) => setName(e.target.value)}
             id=""
             placeholder="Enter Your Name"
-            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
+            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72 text-(--white)"
           />
         </div>
         <div className="flex flex-col items-start gap-3 mt-3">
@@ -135,7 +135,7 @@ const ContactSection = () => {
             onChange={(e) => setEmail(e.target.value)}
             id=""
             placeholder="Enter Your Email"
-            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
+            className="bg-(--gray-color) w-160 h-fit py-4 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72 text-(--white)"
           />
         </div>
         <div className="flex flex-col items-start gap-3 mt-3">
@@ -147,7 +147,7 @@ const ContactSection = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             id=""
-            className="bg-(--gray-color) w-160 h-fit py-8 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72"
+            className="bg-(--gray-color) w-160 h-fit py-8 rounded-l-xl rounded-r-xl px-5 filter brightness-50 max-sm:w-72 text-(--white)"
             placeholder="How can we help ?"
           ></textarea>
         </div>

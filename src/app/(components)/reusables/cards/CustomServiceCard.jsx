@@ -14,7 +14,7 @@ const CustomServiceCard = ({ cardData }) => {
       <motion.div
       variants={slideLeft}
       className="max-sm:items-center border border-(--primary-color) w-73 h-55 rounded-2xl flex flex-col py-2 shadow-[0_7px_10px_-6px_var(--primary-color)]">
-        <div className="mt-5 ml-5 rounded-l-lg rounded-r-lg bg-[linear-gradient(to_bottom,var(--primary-color),var(--secondary-color))] w-12 h-11 flex items-center justify-center">
+        <div className="mt-5 ml-5 rounded-l-lg rounded-r-lg bg-[linear-gradient(to_bottom,var(--primary-color),var(--primary-color))] w-12 h-11 flex items-center justify-center">
           {cardData.icon}
         </div>
 

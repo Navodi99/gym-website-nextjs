@@ -15,32 +15,32 @@ import { container, fadeIn, fadeUp, slideLeft } from "@/app/(utils)/animation";
 const ServiceSection = () => {
   const serviceSectionData = [
     {
-      icon: <BicepsFlexed className="w-8 h-8 text-(--primary-color)" />,
+      icon: <BicepsFlexed className="w-8 h-8 text-(--secondary-color)" />,
       header: "Strength Training",
       text: "Olympic lifting platforms, premium free weights, and state-of-the-art resistance machines.",
     },
     {
-      icon: <HeartPulse className="w-8 h-8 text-(--primary-color)" />,
+      icon: <HeartPulse className="w-8 h-8 text-(--secondary-color)" />,
       header: "Cardio Zone",
       text: "High-end treadmills, rowers, and assault bikes to build your endurance and stamina.",
     },
     {
-      icon: <PersonStanding className="w-8 h-8 text-(--primary-color)" />,
+      icon: <PersonStanding className="w-8 h-8 text-(--secondary-color)" />,
       header: "Yoga & Flexibility",
       text: "Dedicated studio space for mobility work, yoga classes, and active recovery.",
     },
     {
-      icon: <HandFist className="w-8 h-8 text-(--primary-color)" />,
+      icon: <HandFist className="w-8 h-8 text-(--secondary-color)" />,
       header: "Personal Training",
       text: "1-on-1 coaching with certified experts who build custom programs for your goals.",
     },
     {
-      icon: <HandPlatter className="w-8 h-8 text-(--primary-color)" />,
+      icon: <HandPlatter className="w-8 h-8 text-(--secondary-color)" />,
       header: "Nutrition Coaching",
       text: "Fuel your body right with personalized meal plans and macro tracking guidance.",
     },
     {
-      icon: <Gem className="w-8 h-8 text-(--primary-color)" />,
+      icon: <Gem className="w-8 h-8 text-(--secondary-color)" />,
       header: "Recovery & Wellness",
       text: "Cold plunges, saunas, and massage therapy to help you bounce back faster.",
     },

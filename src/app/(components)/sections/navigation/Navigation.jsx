@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CustomButton from "../../reusables/buttons/CustomButton";
 import clsx from "clsx";
 import { navigate } from "next/dist/client/components/segment-cache/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/app/(context)/ThemeContext";
 
 function Navigation() {
@@ -48,9 +48,10 @@ function Navigation() {
       </div>
       <button
         onClick={toggleTheme}
-        className="px-4 py-2 rounded-full bg-(--foreground) dark:bg-(--background) text-(--background) dark:text-(--foreground) transition border-2"
+        className="p-2 rounded-full bg-(--foreground) dark:bg-(--background) text-(--background) dark:text-(--foreground) transition border-2 flex items-center justify-center hover:scale-110 active:scale-95"
+        aria-label="Toggle Dark Mode"
       >
-        {theme === "light" ? " Dark" : "Light"}
+        {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
       </button>
       <div className="max-lg:hidden">
         <ul className="flex gap-14 text-(--light-color) uppercase">

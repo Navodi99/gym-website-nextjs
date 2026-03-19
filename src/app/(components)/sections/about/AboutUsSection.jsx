@@ -51,12 +51,12 @@ const AboutUsSection = () => {
         </motion.p>
         <motion.p 
         variants={fadeUp}
-        className="text-4xl text-center mt-5 max-sm:text-2xl">
+        className="text-4xl text-center mt-5 max-sm:text-2xl text-(--white)">
           Built for Everyone. Powered by Passion.
         </motion.p>
         <motion.p
         variants={fadeIn}
-         className="text-sm text-center px-90 mt-7 max-sm:px-2 ">
+         className="text-sm text-center px-90 mt-7 max-sm:px-2 text-(--white)">
           We provide the best environment, the best equipment, and the best
           coaching to help
           <br /> people achieve their absolute peak potential.
@@ -77,7 +77,7 @@ const AboutUsSection = () => {
             className="rounded-full border-2 border-(--primary-color) w-27 h-27 flex flex-col items-center justify-center max-sm:w-24 max-sm:h-24 max-sm:rounded-full "
           >
             {item.icon}
-            <p className="text-center text-sm mt-3 max-sm:text-xs">
+            <p className="text-center text-sm mt-3 max-sm:text-xs text-(--white)">
               {item.text1}
               <br />
               {item.text2}
