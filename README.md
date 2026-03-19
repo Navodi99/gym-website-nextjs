@@ -25,8 +25,14 @@ A modern, responsive gym website built with Next.js. It features smooth animatio
 ```bash
 git clone https://github.com/Navodi99/gym-website-nextjs.git
 cd gym-website-next
+```
+### 2. Install requied modules
+```bash
+npm install
+```
+### 3. Run the Project locally 
+```bash
 npm run dev
-
 ```
 ## Live link
 https://gym-website-nextjs-sand.vercel.app/
