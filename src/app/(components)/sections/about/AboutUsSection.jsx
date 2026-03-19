@@ -31,7 +31,7 @@ const AboutUsSection = () => {
   ];
 
   return (
-    <div className="bg-(--gray-color) border-t-4 border-(--primary-color) rounded-2xl">
+    <div className="bg-(--gray-color) border-t-4 border-(--primary-color) rounded-2xl" id="about">
       <div>
         <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
           About Us

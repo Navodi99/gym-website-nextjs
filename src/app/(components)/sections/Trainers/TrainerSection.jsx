@@ -37,7 +37,7 @@ const TrainerSection = () => {
   ];
 
   return (
-    <div className="">
+    <div className="" id="trainers">
       <div>
         <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
           Team

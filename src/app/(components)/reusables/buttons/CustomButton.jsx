@@ -2,9 +2,9 @@
 import clsx from "clsx";
 import { MoveUpRight } from "lucide-react";
 
-const CustomButton = ({ children, invert, className }) => {
+const CustomButton = ({ children, invert, className ,onclick}) => {
   return (
-    <div className={clsx("flex items-center group cursor-pointer",className)}>
+    <div className={clsx("flex items-center group cursor-pointer",className)} onClick={onclick}>
       <div
         className={clsx(
           "border-2 rounded-full flex px-6 py-3 transition-all duration-300",className,

@@ -3,7 +3,7 @@ import CustomButton from "../../reusables/buttons/CustomButton";
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center justify-between px-10 ">
+    <div className="flex items-center justify-between px-10 " id="home">
         <div className="py-10 flex  flex-col">
             <p className="uppercase tracking-widest font-semibold">Built Strong</p>
             <p className="text-6xl mt-6">Transform<span className="text-(--primary-color)"> Your Body.</span> </p>

@@ -44,7 +44,7 @@ const ServiceSection = () => {
   ];
 
   return (
-    <div className=" flex items-center flex-col">
+    <div className=" flex items-center flex-col" id="services">
         <div className="mt-5">
             <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
             Services

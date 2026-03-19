@@ -9,7 +9,7 @@ const CustomerTrainerCard = ({cardData}) => {
       </div>
       <div className="flex items-center flex-col my-3 p-3 ">
         <p className="text-(--foreground) text-lg font-bold">{cardData.name}</p>
-        <p className="text-(--primary-color) text-lg font-bold">
+        <p className="text-(--primary-color)  font-bold">
           {cardData.role}
         </p>
         <p className="text-sm text-(--foreground) text-center my-3">

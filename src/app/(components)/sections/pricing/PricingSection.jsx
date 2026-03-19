@@ -46,7 +46,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="pb-50 border-2 border-(--primary-color) rounded-2xl mt-5">
+    <div className="pb-50 border-2 border-(--primary-color) rounded-2xl mt-5" id="pricing">
       <div className="mt-5">
         <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
           Pricing
