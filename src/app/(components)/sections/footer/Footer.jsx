@@ -4,9 +4,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="flex items-center justify-between border-t border-(--primary-color) py-2 max-sm:gap-3 ">
-      <div className="">
-        <div className="rounded-full w-20 overflow-hidden max-sm:w-10">
-          <img src="/images/GymLogo.jpg" alt="Logo" className="w-40 max-sm:w-20"  />
+      <div className="max-sm:hidden">
+        <div className="rounded-full w-20 overflow-hidden ">
+          <img src="/images/GymLogo.jpg" alt="Logo" className="w-40 "  />
         </div>
       </div>
 
