@@ -1,50 +1,43 @@
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+
 import React from "react";
 import CustomerTrainerCard from "../../reusables/cards/CustomerTrainerCard";
 
 const TrainerSection = () => {
-
-    const trainersData = [
-        {
-            image:"/images/trainer1.png",
-            name:"Ethan Cole",
-            role:"Head Strength Coach",
-            text:"Former powerlifting champion specializing in raw strength and biomechanics."
-
-        },
-                {
-            image:"/images/trainer2.png",
-            name:"Ethan Cole",
-            role:"Head Strength Coach",
-            text:"Former powerlifting champion specializing in raw strength and biomechanics."
-
-        },
-                {
-            image:"/images/trainer3.png",
-            name:"Ethan Cole",
-            role:"Head Strength Coach",
-            text:"Former powerlifting champion specializing in raw strength and biomechanics."
-
-        },
-                {
-            image:"/images/trainer4.png",
-            name:"Ethan Cole",
-            role:"Head Strength Coach",
-            text:"Former powerlifting champion specializing in raw strength and biomechanics."
-
-        },
-                {
-            image:"/images/trainer5.png",
-            name:"Ethan Cole",
-            role:"Head Strength Coach",
-            text:"Former powerlifting champion specializing in raw strength and biomechanics."
-
-        }
-
-    ]
+  const trainersData = [
+    {
+      image: "/images/trainer1.png",
+      name: "Ethan Cole",
+      role: "Head Strength Coach",
+      text: "Former powerlifting champion specializing in raw strength and biomechanics.",
+    },
+    {
+      image: "/images/trainer2.png",
+      name: "Liam Carter",
+      role: "Personal Trainer",
+      text: "Specializes in weight loss programs and personalized workout plans for beginners.",
+    },
+    {
+      image: "/images/trainer3.png",
+      name: "Noah Bennett",
+      role: "HIIT Specialist",
+      text: "Focuses on high-intensity interval training to improve endurance and burn fat fast.",
+    },
+    {
+      image: "/images/trainer4.png",
+      name: "Ryan Brooks",
+      role: "Bodybuilding Coach",
+      text: "Helps clients achieve muscle growth and competition-level physique training.",
+    },
+    {
+      image: "/images/trainer5.png",
+      name: "Daniel Hayes",
+      role: "Nutrition & Fitness Coach",
+      text: "Provides diet planning and fitness guidance for sustainable healthy living.",
+    },
+  ];
 
   return (
-    <div className="pb-50">
+    <div className="">
       <div>
         <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center mt-5">
           Team
@@ -52,23 +45,10 @@ const TrainerSection = () => {
         <p className="text-4xl text-center mt-5">Meet Your Trainers</p>
       </div>
 
-      <div>
-        {/* <div className="w-61 h-fit bg-(--background) border border-(--primary-color) rounded-l-3xl rounded-r-3xl shadow-[0_8px_1px_1px_var(--secondary-color)]">
-          <div className="bg-linear-to-b from-[#F1F0EB] to-[#2C2C2C] w-56 h-fit m-2 rounded-l-2xl rounded-r-2xl">
-            <img src="/images/trainer1.png" alt="" />
-          </div>
-          <div className="flex items-center flex-col my-3">
-            <p className="text-(--foreground) text-lg font-bold">Ethan Cole</p>
-            <p className="text-(--primary-color) text-lg font-bold">Head Strength Coach</p>
-            <p className="text-sm text-(--foreground) text-center my-3">Former powerlifting champion specializing in raw strength and biomechanics.</p>
-            <div className="text-(--primary-color) flex items-center justify-center gap-7">
-                <Facebook />
-                <Instagram />
-                <Linkedin />
-            </div>
-          </div>
-        </div> */}
-        <CustomerTrainerCard/>
+      <div className="flex items-center justify-center gap-12.5 mt-10">
+        {trainersData.map((item, index) => (
+          <CustomerTrainerCard key={index} cardData={item} />
+        ))}
       </div>
     </div>
   );
