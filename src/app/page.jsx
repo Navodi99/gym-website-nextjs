@@ -7,6 +7,7 @@ import ServiceSection from "./(components)/sections/servicePart/ServiceSection";
 import PricingSection from "./(components)/sections/pricing/PricingSection";
 import TrainerSection from "./(components)/sections/Trainers/TrainerSection";
 import ContactSection from "./(components)/sections/contact/ContactSection";
+import Footer from "./(components)/sections/footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
   <PricingSection/>
   <TrainerSection/>
   <ContactSection/>
+  <Footer/>
   </div>
   );
 }
