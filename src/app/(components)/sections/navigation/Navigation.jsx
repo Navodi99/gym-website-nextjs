@@ -62,6 +62,9 @@ function Navigation() {
       <div className="hidden">
         <CustomButton onclick={onclickContactBtn}>Contact Us</CustomButton>
       </div>
+      <div>
+        
+      </div>
     </div>
   );
 }
