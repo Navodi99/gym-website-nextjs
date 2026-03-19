@@ -4,6 +4,47 @@ import CustomButton from "../../reusables/buttons/CustomButton";
 import CustomPricingCard from "../../reusables/cards/CustomPricingCard";
 
 const PricingSection = () => {
+  const pricingData = [
+    {
+      header: "Basic Plan",
+      text: "Starter",
+      description: "Perfect for getting back into a routine.",
+      price: "LKR 5000",
+      information: [
+        "Access to gym equipment",
+        "Cardio & weight training area",
+        "Locker facility",
+        "Free fitness assessment",
+      ],
+    },
+
+    {
+      header: "Standard Plan ",
+      text: "Most Popular",
+      description: "Everything you need for serious results.",
+      price: "LKR 8500",
+      information: [
+        "Everything in Basic",
+        "Group classes (Zumba, HIIT, Yoga)",
+        "Diet guidance (basic)",
+        "2 personal training sessions / mo",
+      ],
+    },
+
+    {
+      header: "Premium Plan",
+      text: "Pro Fitness",
+      description: "The ultimate coaching and facility experience.",
+      price: "LKR 15000",
+      information: [
+        "Unlimited access",
+        "Personal trainer (weekly sessions)",
+        "Customized workout & diet plan",
+        "Free fitness Access to premium facilities",
+      ],
+    },
+  ];
+
   return (
     <div className="pb-50 border-2 border-(--primary-color) rounded-2xl mt-5">
       <div className="mt-5">
@@ -16,45 +57,10 @@ const PricingSection = () => {
           for real
         </p>
       </div>
-      <div>
-        {/* <div className="bg-(--secondary-color) border border-(--foreground) w-78 h-fit px-5 py-4">
-            
-                <p className="text-2xl font-semibold ">Basic Plan</p>
-                <p className="text-2xl font-semibold text-(--primary-color)">Starter</p>
-                <p className="text-sm my-4">Perfect for getting back into a routine.</p>
-                <p className="text-3xl font-bold"><span className="text-(--primary-color)">LKR 5000</span> / mo</p>
-            
-            <div className="flex items-start flex-col gap-5 mt-5">
-                <div className="flex items-start gap-5">
-                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[radial-gradient(circle,var(--primary-color)_60%,var(--secondary-color)_100%)]">
-                    <Check className="w-4 h-4 text-(--background)" />
-                </div>
-                <p className="text-sm">Access to gym equipment</p>
-                </div>
-                <div className="flex items-start gap-5">
-                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[radial-gradient(circle,var(--primary-color)_60%,var(--secondary-color)_100%)]">
-                    <Check className="w-4 h-4 text-(--background)" />
-                </div>
-                <p className="text-sm">Cardio & weight training area</p>
-                </div>
-                <div className="flex items-start gap-5">
-                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[radial-gradient(circle,var(--primary-color)_60%,var(--secondary-color)_100%)]">
-                    <Check className="w-4 h-4 text-(--background)" />
-                </div>
-                <p className="text-sm">Locker facility</p>
-                </div>
-                <div className="flex items-start gap-5">
-                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[radial-gradient(circle,var(--primary-color)_60%,var(--secondary-color)_100%)]">
-                    <Check className="w-4 h-4 text-(--background)" />
-                </div>
-                <p className="text-sm">Free fitness assessment</p>
-                </div>
-            </div>
-            <div className="mt-5 flex items-center justify-center">
-                <CustomButton>Enroll Now</CustomButton>
-            </div>
-        </div> */}
-        <CustomPricingCard />
+      <div className="flex items-center justify-center gap-20 mt-5">
+        {pricingData.map((item, index) => (
+          <CustomPricingCard key={index} cardItem={item} />
+        ))}
       </div>
     </div>
   );
