@@ -1,7 +1,48 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import React from "react";
+import CustomerTrainerCard from "../../reusables/cards/CustomerTrainerCard";
 
 const TrainerSection = () => {
+
+    const trainersData = [
+        {
+            image:"/images/trainer1.png",
+            name:"Ethan Cole",
+            role:"Head Strength Coach",
+            text:"Former powerlifting champion specializing in raw strength and biomechanics."
+
+        },
+                {
+            image:"/images/trainer2.png",
+            name:"Ethan Cole",
+            role:"Head Strength Coach",
+            text:"Former powerlifting champion specializing in raw strength and biomechanics."
+
+        },
+                {
+            image:"/images/trainer3.png",
+            name:"Ethan Cole",
+            role:"Head Strength Coach",
+            text:"Former powerlifting champion specializing in raw strength and biomechanics."
+
+        },
+                {
+            image:"/images/trainer4.png",
+            name:"Ethan Cole",
+            role:"Head Strength Coach",
+            text:"Former powerlifting champion specializing in raw strength and biomechanics."
+
+        },
+                {
+            image:"/images/trainer5.png",
+            name:"Ethan Cole",
+            role:"Head Strength Coach",
+            text:"Former powerlifting champion specializing in raw strength and biomechanics."
+
+        }
+
+    ]
+
   return (
     <div className="pb-50">
       <div>
@@ -12,7 +53,7 @@ const TrainerSection = () => {
       </div>
 
       <div>
-        <div className="w-61 h-fit bg-(--background) border border-(--primary-color) rounded-l-3xl rounded-r-3xl shadow-[0_8px_1px_1px_var(--secondary-color)]">
+        {/* <div className="w-61 h-fit bg-(--background) border border-(--primary-color) rounded-l-3xl rounded-r-3xl shadow-[0_8px_1px_1px_var(--secondary-color)]">
           <div className="bg-linear-to-b from-[#F1F0EB] to-[#2C2C2C] w-56 h-fit m-2 rounded-l-2xl rounded-r-2xl">
             <img src="/images/trainer1.png" alt="" />
           </div>
@@ -26,7 +67,8 @@ const TrainerSection = () => {
                 <Linkedin />
             </div>
           </div>
-        </div>
+        </div> */}
+        <CustomerTrainerCard/>
       </div>
     </div>
   );
