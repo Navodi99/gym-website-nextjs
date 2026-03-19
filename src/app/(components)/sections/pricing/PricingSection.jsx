@@ -54,7 +54,7 @@ const PricingSection = () => {
                 <CustomButton>Enroll Now</CustomButton>
             </div>
         </div> */}
-        <CustomPricingCard/>
+        <CustomPricingCard />
       </div>
     </div>
   );

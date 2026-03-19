@@ -4,8 +4,8 @@ import CustomButton from "../buttons/CustomButton";
 
 const CustomPricingCard = () => {
   return (
-    <div className="relative w-78 h-[calc(fit-content+40px)] py-8 border-x-2 border-(--foreground) overflow-y-hidden">
-      <div className="absolute w-78 h-8 bg-(--secondary-color) top-3 -rotate-4" />
+    <div className="relative w-78 h-[calc(fit-content+40px)] py-8 border-x-2 border-(--foreground) overflow-y-hidden overflow-x-hidden ">
+      <div className="absolute w-78 h-8 bg-(--secondary-color) top-3 -rotate-4 border-t-2 border-(--foreground)" />
       <div className="bg-(--secondary-color) border border-(--foreground) w-78 h-fit px-5 py-8 ">
         <p className="text-2xl font-semibold ">Basic Plan</p>
         <p className="text-2xl font-semibold text-(--primary-color)">Starter</p>
@@ -44,6 +44,7 @@ const CustomPricingCard = () => {
           <CustomButton>Enroll Now</CustomButton>
         </div>
       </div>
+      <div className="absolute w-78 h-8 bg-(--secondary-color) bottom-3 -rotate-4 border-b-2 border-(--foreground)" />
     </div>
   );
 };
