@@ -15,12 +15,6 @@ const HeroSection = () => {
       className={clsx(
         "flex items-center justify-between p-5 my-15",
         "max-sm:flex-col max-sm:my-2",
-        "max-sm:bg-[url('/images/hero.png')]",
-        "max-sm:bg-size-[420px]",
-        "max-sm:bg-center max-sm:bg-no-repeat",
-        "max-sm:relative",
-        "max-sm:bg-(--background)/60",
-        "max-sm:bg-blend-darken",
       )}
     >
       <motion.div className="pb-10 flex flex-col" variants={container}>
