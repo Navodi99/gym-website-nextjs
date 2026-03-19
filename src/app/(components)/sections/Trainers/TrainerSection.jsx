@@ -1,6 +1,8 @@
-
+"use client";
 import React from "react";
 import CustomerTrainerCard from "../../reusables/cards/CustomerTrainerCard";
+import { motion } from "framer-motion";
+import { container, fadeUp } from "@/app/(utils)/animation";
 
 const TrainerSection = () => {
   const trainersData = [
@@ -37,20 +39,39 @@ const TrainerSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center mb-15 p-5 max-sm:my-2" id="trainers">
-      <div>
-        <p className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl">
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      variants={container}
+      className="flex flex-col items-center mb-15 p-5 max-sm:my-2"
+      id="trainers"
+    >
+      <motion.div variants={container} initial="hidden" whileInView="show">
+        <motion.p
+          variants={fadeUp}
+          className="uppercase tracking-widest font-bold text-2xl text-(--primary-color) text-center max-sm:text-xl"
+        >
           Team
-        </p>
-        <p className="text-4xl text-center mt-5 max-sm:text-2xl">Meet Your Trainers</p>
-      </div>
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          className="text-4xl text-center mt-5 max-sm:text-2xl"
+        >
+          Meet Your Trainers
+        </motion.p>
+      </motion.div>
 
-      <div className="flex items-center justify-between gap-10 my-5 max-sm:flex-col">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        className="flex items-center justify-between gap-10 my-5 max-sm:flex-col"
+      >
         {trainersData.map((item, index) => (
           <CustomerTrainerCard key={index} cardData={item} />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

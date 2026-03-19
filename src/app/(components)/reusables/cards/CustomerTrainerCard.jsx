@@ -1,9 +1,15 @@
+"use client";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
+import { blurFade } from "@/app/(utils)/animation";
 
 const CustomerTrainerCard = ({cardData}) => {
   return (
-    <div className="w-60 h-110 bg-(--background) border border-(--primary-color) rounded-l-3xl rounded-r-3xl shadow-[0_8px_1px_1px_var(--secondary-color)]">
+    <motion.div
+    variants={blurFade}
+    
+    className="w-60 h-110 bg-(--background) border border-(--primary-color) rounded-l-3xl rounded-r-3xl shadow-[0_8px_1px_1px_var(--secondary-color)]">
       <div className="bg-linear-to-b from-[#F1F0EB] to-[#2C2C2C] w-56 h-fit m-2 rounded-l-2xl rounded-r-2xl">
        <img src={cardData.image}/>
       </div>
@@ -21,7 +27,7 @@ const CustomerTrainerCard = ({cardData}) => {
           <Linkedin />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
