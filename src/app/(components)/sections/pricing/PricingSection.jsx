@@ -4,7 +4,7 @@ import React from "react";
 import CustomButton from "../../reusables/buttons/CustomButton";
 import CustomPricingCard from "../../reusables/cards/CustomPricingCard";
 import { motion } from "framer-motion";
-import { container, fadeIn, fadeUp } from "@/app/(utils)/animation";
+import { bounceIn, container, fadeIn, fadeUp } from "@/app/(utils)/animation";
 
 const PricingSection = () => {
   const pricingData = [
@@ -83,9 +83,8 @@ const PricingSection = () => {
         </motion.p>
       </motion.div>
       <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
+        variants={bounceIn}
+      
         className="flex items-center justify-center gap-40 my-5 max-sm:flex-col max-sm:gap-0 "
       >
         {pricingData.map((item, index) => (

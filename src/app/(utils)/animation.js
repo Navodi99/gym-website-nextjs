@@ -96,3 +96,16 @@ export const bounceIn = {
     },
   },
 };
+
+export const magnetic = {
+  rest: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.05,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+    },
+  },
+};

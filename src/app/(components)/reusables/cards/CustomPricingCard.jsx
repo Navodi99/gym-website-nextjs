@@ -3,17 +3,16 @@ import { Check } from "lucide-react";
 import React from "react";
 import CustomButton from "../buttons/CustomButton";
 import { motion } from "framer-motion";
-import { bounceIn, container } from "@/app/(utils)/animation";
+import { bounceIn, container, magnetic } from "@/app/(utils)/animation";
 
 const CustomPricingCard = ({cardItem}) => {
   return (
     <motion.div
-    variants={container}
-    initial="hidden"
-    whileInView="show"
+    variants={magnetic}
+    initial="rest"
+    whileHover="hover"
     className="relative w-78 h-[calc(fit-content+40px)] py-8  overflow-y-hidden overflow-x-hidden max-sm:w-70">  
-      <motion.div
-      variants={bounceIn}
+      <div
       className="bg-(--secondary-color)  w-78 h-fit px-5 py-8 border-2 border-(--foreground) -skew-y-[4deg] max-sm:w-70">
         <p className="text-2xl font-semibold skew-y-[4deg] max-sm:text-xl ">{cardItem.header}</p>
         <p className="text-2xl font-semibold text-(--primary-color) skew-y-[4deg] max-sm:text-xl">{cardItem.text}</p>
@@ -35,7 +34,7 @@ const CustomPricingCard = ({cardItem}) => {
         <div className="mt-5 flex items-center justify-center skew-y-[4deg]">
           <CustomButton>Enroll Now</CustomButton>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
